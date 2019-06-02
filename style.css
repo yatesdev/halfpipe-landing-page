@@ -1,0 +1,43 @@
+:root {
+  --grey-base: rgb(224,224,224);
+  --sign-in-red: rgb(165, 13, 13);
+}
+
+@font-face {
+  font-family: 'NeuzeitGrotesk-Light';
+  src: url('fonts/DINNeuzeitGrotesk-Light.otf');
+}
+@font-face {
+  font-family: 'NeuzeitGrotesk-BoldCondensed';
+  src: url('fonts/DINNeuzeitGrotesk-BoldCond.otf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'NeuzeitGrotesk-Light', sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--grey-base);
+  height: 110px;
+}
+
+.nav .nav-links {
+  margin-right: 5%;
+}
+
+.nav .nav-links > a {
+  font-size: 1rem;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+.nav .nav-links > a:last-child {
+  color: var(--sign-in-red);
+  margin-right: 0;
+}
