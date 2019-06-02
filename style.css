@@ -29,6 +29,7 @@ header {
   background-color: var(--grey-base);
   align-items: center;
   justify-content: flex-end;
+  z-index: 10;
 }
 
 .nav-links {
@@ -65,8 +66,28 @@ article {
 
 section {
   scroll-snap-align: start;
-}
-.scroll-snap {
-  scroll-snap-align: start;
   height: 100vh;
+  background-size: cover;
+}
+
+.hero {
+  background-image: url('img/header_nude.png');
+  /* TODO: Need to customize the height of each of these to match the content. Not Just blanket 100vh */
+}
+
+.about-us {
+  background-image: url('img/aboutus_nude.png');
+  
+}
+
+.publishers {
+  background-image: url('img/pub_notext.png'); 
+}
+
+.demand {
+  background-image: url('img/dem_notext.png');
+}
+
+.connect {
+  background-image: url('img/signin_nude.png');
 }
