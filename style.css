@@ -84,7 +84,80 @@ section {
 
 .hero {
   background-image: url('img/header_nude.png');
+  background-position: right;
   /* TODO: Need to customize the height of each of these to match the content. Not Just blanket 100vh */
+}
+
+.radically-different {
+  --text-size: 12rem;
+  position: absolute;
+  top: 42%;
+  font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
+}
+/* TODO: Convert to using hX tags?  */
+.hero .radically-different > div {
+  font-size: var(--text-size);
+  text-transform: uppercase;
+  line-height: var(--text-size);
+  position: relative;
+  height: var(--text-size);
+  width: 44rem;
+  margin-left: -1rem;
+}
+
+/* TODO: Find a way to make the top a ratio of the text-size and the thickness(height) */
+.hero .radically-different .overlay {
+  top: 3rem;
+  left: 0;
+  height: 5rem;
+  opacity: 0.8;
+}
+
+.hero .anti-establishment {
+  --text-size: 6rem;
+  font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
+  position: absolute;
+  top: 17%;
+  right:0;
+  display: inline-block;
+}
+
+.hero .anti-establishment > div {
+  font-size: var(--text-size);
+  text-transform: uppercase;
+  line-height: var(--text-size);
+  position: relative;
+  height: var(--text-size);
+  width: 32rem;
+  text-align: justify;
+}
+
+.hero .anti-establishment .overlay {
+  top: 2.5rem;
+  right: 0;
+  height: 0.5rem;
+  opacity: 1;
+}
+
+.overlay.four-fifths {
+  width: 80%;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+}
+.overlay.red {
+  background-color: red;
+}
+
+.overlay.black {
+  background-color: black;
+}
+
+.overlay.solid {
+  opacity: 1;
 }
 
 .about-us {
