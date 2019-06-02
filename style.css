@@ -1,4 +1,5 @@
 :root {
+  --navbar-height: 110px;
   --grey-base: rgb(224,224,224);
   --sign-in-red: rgb(165, 13, 13);
 }
@@ -18,26 +19,54 @@ body {
   font-family: 'NeuzeitGrotesk-Light', sans-serif;
 }
 
-.nav {
+header {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  padding: 0;
+  height: var(--navbar-height);
+  width: 100%;
   background-color: var(--grey-base);
-  height: 110px;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.nav .nav-links {
+.nav-links {
   margin-right: 5%;
 }
 
-.nav .nav-links > a {
+.nav-links > a {
   font-size: 1rem;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 2rem;
 }
-.nav .nav-links > a:last-child {
+.nav-links > a:last-child {
   color: var(--sign-in-red);
   margin-right: 0;
+}
+
+
+article {
+  overflow: scroll;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: var(--navbar-height);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: var(--navbar-height);
+
+  -webkit-overflow-scrolling: touch;
+}
+
+section {
+  scroll-snap-align: start;
+}
+.scroll-snap {
+  scroll-snap-align: start;
+  height: 100vh;
 }
