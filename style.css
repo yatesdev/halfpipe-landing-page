@@ -156,13 +156,31 @@ section {
   background-color: black;
 }
 
-.overlay.solid {
-  opacity: 1;
+.about-us {
+  position: relative;
+  background-image: url('img/aboutus_nude.png');
+  background-position: right;
 }
 
-.about-us {
-  background-image: url('img/aboutus_nude.png');
-  
+.about-us .sucks {
+  --text-size: 15rem;
+  font-size: var(--text-size);
+  font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
+  line-height: var(--text-size);
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  top: 45%;
+  left:0;
+  margin-left: -1rem;
+}
+
+.about-us .sucks .overlay {
+  top: 9.5rem;
+  left: 0;
+  height: 14rem;
+  width: 41rem;
+  opacity: 0.8;
 }
 
 .publishers {
