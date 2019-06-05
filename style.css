@@ -1,5 +1,5 @@
 :root {
-  --navbar-height: 110px;
+  --navbar-height: 60px;
   --grey-base: rgb(224,224,224);
   --sign-in-red: rgb(165, 13, 13);
 }
@@ -17,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'NeuzeitGrotesk-Light', sans-serif;
+  box-sizing: border-box;
 }
 
 header {
@@ -38,7 +39,7 @@ header {
 }
 
 .logo img {
-  height: calc(var(--navbar-height) - 2rem);
+  height: calc(var(--navbar-height) - 1.5rem);
 }
 
 .nav-links {
@@ -49,7 +50,8 @@ header {
 }
 
 .nav-links > a {
-  font-size: 1rem;
+  font-size: .75rem;
+  letter-spacing: 2px;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
@@ -63,7 +65,7 @@ header {
 
 article {
   overflow: scroll;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   scroll-padding-top: var(--navbar-height);
 
   position: absolute;
@@ -72,53 +74,66 @@ article {
   left: 0;
   right: 0;
   padding-top: var(--navbar-height);
-
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 section {
   scroll-snap-align: start;
-  height: 100vh;
-  background-size: cover;
+  --background-size: 100vw;
+  background-repeat: no-repeat;
+  height: calc(972/1920 * var(--background-size));
 }
 
 .hero {
-  background-image: url('img/header_nude.png');
-  background-position: right;
-  /* TODO: Need to customize the height of each of these to match the content. Not Just blanket 100vh */
+  background-image: url('img/01_head_lg.jpg');
+  background-size: cover;
+  background-position: top;
+  height: 100%;
+  /* background-position: right 0 top var(--navbar-height);
+  background-attachment: fixed;
+  height: calc(972/1920 * var(--background-size) - var(--navbar-height)); */
+/*TODO: If removing background-attachment: fixed, then also remove height line above*/
+}
+
+.hero .red-line {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+  margin-bottom: -1vw;
 }
 
 .radically-different {
-  --text-size: 12rem;
-  position: absolute;
-  top: 42%;
+  --text-size: 14vw;
+  position: relative;
+  top: 11%;
   font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
 }
-/* TODO: Convert to using hX tags?  */
+
 .hero .radically-different > div {
   font-size: var(--text-size);
   text-transform: uppercase;
   line-height: var(--text-size);
   position: relative;
   height: var(--text-size);
-  width: 44rem;
-  margin-left: -1rem;
+  width: 50vw;
+  margin-left: -1.2vw;
 }
 
-/* TODO: Find a way to make the top a ratio of the text-size and the thickness(height) */
 .hero .radically-different .overlay {
-  top: 3rem;
+  top: 3vw;
   left: 0;
-  height: 5rem;
-  opacity: 0.8;
+  height: 7vw;
+  opacity: 0.9;
 }
 
 .hero .anti-establishment {
-  --text-size: 6rem;
+  --text-size: 4vw;
   font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
   position: absolute;
-  top: 17%;
-  right:0;
+  top: 11.5%;
+  right: 0%;
   display: inline-block;
 }
 
@@ -128,14 +143,15 @@ section {
   line-height: var(--text-size);
   position: relative;
   height: var(--text-size);
-  width: 32rem;
+  width: 21vw;
   text-align: justify;
+  padding-left: .5vw;
 }
 
 .hero .anti-establishment .overlay {
-  top: 2.5rem;
+  top: 1.5vw;
   right: 0;
-  height: 0.5rem;
+  height: 0.5vw;
   opacity: 1;
 }
 
@@ -149,7 +165,7 @@ section {
   position: absolute;
 }
 .overlay.red {
-  background-color: red;
+  background-color: rgb(240, 20, 20);
 }
 
 .overlay.black {
@@ -158,39 +174,130 @@ section {
 
 .about-us {
   position: relative;
-  background-image: url('img/aboutus_nude.png');
-  background-position: right;
+  background-image: url('img/aboutus.png');
+  background-size: contain;
+}
+
+.about-us h1 {
+  text-transform: uppercase;
 }
 
 .about-us .sucks {
-  --text-size: 15rem;
+  --text-size: 17vw;
   font-size: var(--text-size);
   font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
   line-height: var(--text-size);
   color: white;
   text-transform: uppercase;
   position: absolute;
-  top: 45%;
+  top: 21vw;
   left:0;
-  margin-left: -1rem;
+  margin-left: -1vw;
 }
 
 .about-us .sucks .overlay {
-  top: 9.5rem;
+  top: 11vw;
   left: 0;
-  height: 14rem;
-  width: 41rem;
-  opacity: 0.8;
+  height: 16vw;
+  width: 47vw;
+  opacity: 0.9;
+}
+
+.about-us .content-area {
+  position: absolute;
+  top: 5vw;
+  right: 2%;
+  height: 8vw;
+  width: 26.4vw;
+  padding: 1vw;
+  padding-right: 3vw;
+  font-size: 1.25vw;
+  line-height: 150%;
 }
 
 .publishers {
-  background-image: url('img/pub_notext.png'); 
+  position: relative;
+  background-image: url('img/pub_notext.png');
+  background-size: contain;
+}
+
+.publishers h1 {
+  text-transform: uppercase;
+}
+
+.publishers .content-area {
+  position: absolute;
+  top: 12vw;
+  right: 9.5%;
+  height: 7vw;
+  width: 28vw;
+  padding: 1vw;
+  color: white;
+  font-size: 1.25vw;
+  line-height: 150%;
 }
 
 .demand {
+  position: relative;
   background-image: url('img/dem_notext.png');
+  background-size: contain;
+}
+
+.demand h1 {
+  text-transform: uppercase;
+}
+
+.demand .content-area {
+  position: absolute;
+  top: 10vw;
+  left: 6%;
+  height: 8vw;
+  width: 28vw;
+  padding: 1vw;
+  color: black;
+  font-size: 1.25vw;
+  line-height: 150%;
 }
 
 .connect {
-  background-image: url('img/signin_nude.png');
+  position: relative;
+  background-image: url('img/signin.png');
+  background-size: contain;
+  height: calc(1138/1919 * var(--background-size));
+}
+
+.connect h1 {
+  font-size: 2vw;
+  color: gray;
+}
+
+.connect .centered {
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 75vh;
+  text-align: center;
+  line-height: 200%;
+}
+
+.connect button {
+  width: 26vw;
+  height: 8vw;
+  margin-bottom: 2.5vw;
+  font-size: 2vw;
+  color: white;
+  border: none;
+  opacity: 0.9;
+  font-family: inherit;
+}
+
+.connect button.red {
+  background-color: rgb(240, 20, 20);
+  top: 10vw;
+}
+
+.connect button.gray {
+  background-color: gray;
+  top: 24vw;
 }
