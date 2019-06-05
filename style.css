@@ -1,6 +1,7 @@
 :root {
   --navbar-height: 60px;
   --grey-base: rgb(224,224,224);
+  --content-body-color: rgb(119, 119, 119);
   --sign-in-red: rgb(165, 13, 13);
 }
 
@@ -213,6 +214,12 @@ section {
   padding-right: 3vw;
   font-size: 1.25vw;
   line-height: 150%;
+  color: var(--content-body-color);
+}
+
+.about-us .content-area h1,
+.about-us .content-area h2 {
+  color: black
 }
 
 .publishers {
@@ -257,6 +264,12 @@ section {
   color: black;
   font-size: 1.25vw;
   line-height: 150%;
+  color: var(--content-body-color);
+}
+
+.demand .content-area h1,
+.demand .content-area h2 {
+  color: black
 }
 
 .connect {
