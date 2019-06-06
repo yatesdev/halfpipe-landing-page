@@ -101,8 +101,9 @@ section {
   position: absolute;
   right: 0;
   bottom: 0;
-  border: none;
-  margin-bottom: -1vw;
+  background-color: red;
+  width: calc(190/1920 * 100%);
+  height: calc(41/1920 * 100%);
 }
 
 .radically-different {
