@@ -21,7 +21,7 @@ body {
   box-sizing: border-box;
 }
 
-header {
+header.navbar {
   display: flex;
   position: fixed;
   top: 0;
