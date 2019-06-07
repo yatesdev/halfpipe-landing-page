@@ -99,13 +99,13 @@
           <h1>Want to know more? <br/>
             Request an invite and we'll tell you all about it.
           </h1>
-          <button class="red">Request an invitation</button>
+          <button class="red" onclick="toggleRequestInviteModal()">Request an invitation</button>
           <button class="gray">SIGN IN</button>
         </div>
       </div>
     </section>
   </article>
-  <aside class="modal-overlay">
+  <aside id="request-invite-modal" class="request-invite modal-overlay open">
     <div class="modal">
       <header>
         <h1>Request an invite</h1>
@@ -121,5 +121,18 @@
       </footer>
     </div>
   </aside>
+  <script>
+    const requestInviteModal = document.getElementById('request-invite-modal');
+    
+    function toggleRequestInviteModal() {
+      requestInviteModal.classList.toggle('open');
+    }
+
+    window.onclick = function(event) {
+      if (event.target == requestInviteModal) {
+        toggleRequestInviteModal();
+      }
+    }
+  </script>
 </body>
 </html>
