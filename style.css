@@ -67,6 +67,52 @@ header.navbar {
   margin-right: 0;
 }
 
+.nav-links.left {
+  justify-content: space-evenly;
+  margin-right: 0;
+  flex: 0 0 25vw;
+}
+.nav-links.left > a {
+  font-size: 1rem;
+}
+.nav-links.left > a:last-child {
+  color: black;
+}
+
+footer.site-footer {
+  position: absolute;
+  bottom: 5vw;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
+  letter-spacing: 2px;
+}
+
+.site-footer .copyright {
+  flex: 1 0;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.site-footer .social-links {
+  display: flex;
+  flex: 0 0 25vw;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.site-footer .social-links > a {
+  text-decoration: none;
+}
+
+.site-footer .social-links > a:first-child {
+  color: var(--red-base);
+}
+
 
 article {
   overflow: scroll;
