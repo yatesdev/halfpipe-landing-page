@@ -85,7 +85,7 @@ footer.site-footer {
   left: 0;
   right: 0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   padding-left: 3%;
   padding-right: 3%;
@@ -102,15 +102,21 @@ footer.site-footer {
 .site-footer .social-links {
   display: flex;
   flex: 0 0 25vw;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
 }
 .site-footer .social-links > a {
   text-decoration: none;
+  opacity: 0.5;
 }
 
 .site-footer .social-links > a:first-child {
   color: var(--red-base);
+  opacity: 1;
+}
+.site-footer .social-links img {
+  height: 50px;
+  width: 50px;
 }
 
 
