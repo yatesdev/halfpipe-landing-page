@@ -3,6 +3,7 @@
   --grey-base: rgb(224,224,224);
   --content-body-color: rgb(119, 119, 119);
   --sign-in-red: rgb(165, 13, 13);
+  --red-base: rgb(240, 20, 20);
 }
 
 @font-face {
@@ -101,7 +102,7 @@ section {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-color: var(--red-base);
   width: calc(190/1920 * 100%);
   height: calc(41/1920 * 100%);
 }
@@ -167,7 +168,7 @@ section {
   position: absolute;
 }
 .overlay.red {
-  background-color: rgb(240, 20, 20);
+  background-color: var(--red-base);
 }
 
 .overlay.black {
@@ -313,7 +314,7 @@ section {
 
 .modal button.red,
 .connect button.red {
-  background-color: rgb(240, 20, 20);
+  background-color: var(--red-base);
   top: 10vw;
 }
 
@@ -342,7 +343,7 @@ section {
   top: 10vh;
   margin: auto;
   width: 80vw;
-  border-top: 2rem solid red;
+  border-top: 2rem solid var(--red-base);
   background-color: white;
   display: flex;
   flex-direction: column;
