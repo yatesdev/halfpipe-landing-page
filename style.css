@@ -295,6 +295,7 @@ section {
   line-height: 200%;
 }
 
+.modal button,
 .connect button {
   display: block;
   width: 26vw;
@@ -309,11 +310,13 @@ section {
   font-family: inherit;
 }
 
+.modal button.red,
 .connect button.red {
   background-color: rgb(240, 20, 20);
   top: 10vw;
 }
 
+.modal button.gray,
 .connect button.gray {
   background-color: gray;
   top: 24vw;
@@ -347,8 +350,37 @@ section {
 
 .modal header h1 {
   text-transform: uppercase;
+  font-size: 2.5rem;
 }
 
-form > input {
-  display: block;
+.modal-content {
+  width: 100%;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
+.modal-content > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form > input {
+  width: 60%;
+  display: block;
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--grey-base);
+  font-size: 1.5rem;
+  padding: 1rem 1rem 0rem 0rem;
+  margin: 1rem;
+}
+form > input::placeholder {
+  text-transform: uppercase;
+  color: var(--grey-base);
+  font-size: 1.5rem;
+}
+
+form > input:focus {
+  outline: none;
+}
+
