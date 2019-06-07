@@ -4,6 +4,8 @@
   --content-body-color: rgb(119, 119, 119);
   --sign-in-red: rgb(165, 13, 13);
   --red-base: rgb(240, 20, 20);
+  --font-stack: 'NeuzeitGrotesk-Light', sans-serif;
+  --font-stack-bold: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
 }
 
 @font-face {
@@ -18,7 +20,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'NeuzeitGrotesk-Light', sans-serif;
+  font-family: var(--font-stack);
   box-sizing: border-box;
 }
 
@@ -111,7 +113,7 @@ section {
   --text-size: 14vw;
   position: relative;
   top: 11%;
-  font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
+  font-family: var(--font-stack-bold);
 }
 
 .hero .radically-different > div {
@@ -133,7 +135,7 @@ section {
 
 .hero .anti-establishment {
   --text-size: 4vw;
-  font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
+  font-family: var(--font-stack-bold);
   position: absolute;
   top: 11.5%;
   right: 0%;
@@ -188,7 +190,7 @@ section {
 .about-us .sucks {
   --text-size: 17vw;
   font-size: var(--text-size);
-  font-family: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
+  font-family: var(--font-stack-bold);
   line-height: var(--text-size);
   color: white;
   text-transform: uppercase;
