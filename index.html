@@ -16,7 +16,7 @@
       <a href="#publishers">Publishers</a>
       <a href="#demand">Demand</a>
       <a href="#connect">Connect</a>
-      <a href="#signin">/ Sign In</a>
+      <a href="#" onclick="toggleSignInModal()">/ Sign In</a>
     </nav>
   </header>
   <article>
@@ -100,7 +100,7 @@
             Request an invite and we'll tell you all about it.
           </h1>
           <button class="red" onclick="toggleRequestInviteModal()">Request an invitation</button>
-          <button class="gray">SIGN IN</button>
+          <button class="gray" onclick="toggleSignInModal()">SIGN IN</button>
         </div>
       </div>
     </section>
@@ -121,16 +121,42 @@
       </footer>
     </div>
   </aside>
+  <aside id="signin" class="sign-in modal-overlay">
+    <div class="modal">
+      <header>
+        <h1>Sign In</h1>
+      </header>
+      <div class="modal-content">
+        <form id="sign-in-form">
+          <input type="text" placeholder="Username">
+          <input type="password" placeholder="Password">
+          <div class="forgot-password">Forgot password?</div>
+        </form>
+      </div>
+      <footer>
+        <button class="gray" type="submit" form="sign-in-form">SUBMIT</button>
+        <div class="no-account-invite">Don't have an account? <span class="red" onclick="toggleSignInModal(); toggleRequestInviteModal();">Request an invite!</span></div>
+      </footer>
+    </div>
+  </aside>
   <script>
     const requestInviteModal = document.getElementById('request-invite-modal');
+    const signInModal = document.getElementById('signin');
 
     function toggleRequestInviteModal() {
       requestInviteModal.classList.toggle('open');
     }
 
+    function toggleSignInModal() {
+      signInModal.classList.toggle('open');
+    }
+
     window.onclick = function(event) {
       if (event.target == requestInviteModal) {
         toggleRequestInviteModal();
+      }
+      if (event.target == signInModal) {
+        toggleSignInModal();
       }
     }
   </script>

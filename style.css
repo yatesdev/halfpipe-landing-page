@@ -4,6 +4,7 @@
   --content-body-color: rgb(119, 119, 119);
   --sign-in-red: rgb(165, 13, 13);
   --red-base: rgb(240, 20, 20);
+  --modal-top-red: rgb(238, 45, 50); /* Color picking the border on the modal gave me this as the color */
   --font-stack: 'NeuzeitGrotesk-Light', sans-serif;
   --font-stack-bold: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
 }
@@ -351,15 +352,11 @@ button.gray {
   top: 10vh;
   margin: auto;
   width: 80vw;
-  border-top: 2rem solid var(--red-base);
+  border-top: 2rem solid var(--modal-top-red);
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.modal > header {
-  height: 5rem;
 }
 
 .modal header h1 {
@@ -367,9 +364,18 @@ button.gray {
   font-size: 2.5rem;
 }
 
+.modal footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.request-invite footer {
+  margin-bottom: 3.5rem;
+}
+
 .modal-content {
-  width: 100%;
-  margin-top: 3%;
+  width: 60%;
   margin-bottom: 3%;
 }
 .modal-content > form {
@@ -377,8 +383,25 @@ button.gray {
   flex-direction: column;
   align-items: center;
 }
-form > input {
-  width: 60%;
+
+.forgot-password {
+  color: var(--content-body-color);
+  align-self: start;
+  font-size: 1.25rem;
+}
+
+.no-account-invite {
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+.no-account-invite .red {
+  color: var(--red-base);
+  cursor: pointer;
+}
+
+form input {
+  width: 100%;
   display: block;
   background: none;
   border: none;
@@ -387,14 +410,15 @@ form > input {
   font-size: 1.5rem;
   padding: 1rem 1rem 0rem 0rem;
   margin: 1rem;
+  box-sizing: border-box;
 }
-form > input::placeholder {
+
+form input::placeholder {
   text-transform: uppercase;
-  color: var(--grey-base);
+  color: var(--content-body-color);
   font-size: 1.5rem;
 }
 
-form > input:focus {
+form input:focus {
   outline: none;
 }
-
