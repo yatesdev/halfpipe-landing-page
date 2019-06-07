@@ -29,9 +29,11 @@ header.navbar {
   display: flex;
   position: fixed;
   top: 0;
-  padding: 0;
+  left: 0;
+  right: 0;
+  padding-left: 3%;
+  padding-right: 3%;
   height: var(--navbar-height);
-  width: 100%;
   background-color: var(--grey-base);
   align-items: center;
   justify-content: flex-end;
@@ -40,7 +42,6 @@ header.navbar {
 
 .logo {
   flex: 0 1;
-  margin-left: 3%;
 }
 
 .logo img {
@@ -51,7 +52,6 @@ header.navbar {
   display: flex;
   flex: 1 0;
   justify-content: flex-end;
-  margin-right: 3%;
 }
 
 .nav-links > a {
