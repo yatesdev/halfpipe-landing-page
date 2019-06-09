@@ -6,3 +6,7 @@ $modal-top-red: rgb(238, 45, 50);
 $font-stack: 'NeuzeitGrotesk-Light', sans-serif;
 $font-stack-bold: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
 $background-size: 100vw;
+
+$breakpoints: (
+  'desktop': 1024px
+);

@@ -6,11 +6,28 @@
   right: 0;
   padding-left: 3%;
   padding-right: 3%;
-  height: $navbar-height;
+  flex-direction: row;
+  min-height: $navbar-height;
   background-color: $grey-base;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   z-index: 10;
+
+  &.open {
+    bottom: 0;
+    flex-direction: column;
+
+    .nav-links,
+    .social-links,
+    .copyright,
+    .email {
+      display: flex;
+    }
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
 
   .logo {
     flex: 0 1;
@@ -21,9 +38,16 @@
   }
 
   .nav-links {
-    display: flex;
+    display: none;
     flex: 1 0;
-    justify-content: flex-end;
+    flex-direction: column;
+    
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
 
     a {
       font-size: .75rem;
@@ -31,11 +55,87 @@
       color: black;
       text-transform: uppercase;
       text-decoration: none;
-      margin-right: 2rem;
+      margin-bottom: 2rem;
+
+      @include desktop {
+        margin-right: 2rem;
+        margin-bottom: 0;
+      }
 
       &:last-child {
         color: rgb(165, 13, 13);
         margin-right: 0;
+      }
+    }
+  }
+
+  .social-links {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0.3;
+    text-decoration: none;
+    width: 100%;
+
+    @include desktop {
+      display: none;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .copyright {
+    display: none;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .email {
+    display: none;
+    color: $red-base;
+    text-decoration: none;
+  }
+
+  .toggle {
+    position: absolute;
+    top: ($navbar-height / 4);
+    right: 0;
+    height: $navbar-height;
+    
+    @include desktop {
+      display: none;
+    }
+
+    .bar-1,
+    .bar-2,
+    .bar-3 {
+      width: 4rem;
+      height: 0.2rem;
+      background-color: $red-base;
+      transition: 0.3s;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    &.open {
+      .bar-1 {
+        transform: rotate(-45deg) translate(-1.1rem, 0rem);
+      }
+
+      .bar-2 {
+        opacity: 0;;
+      }
+
+      .bar-3 {
+        transform: rotate(45deg) translate(-0.5rem, 0.5rem);
       }
     }
   }
