@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  height: $navbar-height;
+  background-color: $grey-base;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 10;
+
+  .logo {
+    flex: 0 1;
+
+    img {
+      height: calc(#{$navbar-height} - 1.5rem);
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex: 1 0;
+    justify-content: flex-end;
+
+    a {
+      font-size: .75rem;
+      letter-spacing: 2px;
+      color: black;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-right: 2rem;
+
+      &:last-child {
+        color: rgb(165, 13, 13);
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.connect {
+  @extend %page-section;
+  position: relative;
+  background-image: url('img/signin.png');
+  background-size: contain;
+  height: calc(1138/1919 * #{$background-size});
+
+  h1 {
+    font-size: 2vw;
+    color: gray;
+  }
+
+  .centered {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 75vh;
+    text-align: center;
+    line-height: 200%;
+  }
+
+  button {
+    margin: auto;
+    margin-bottom: 2.5vw;
+
+    &.red { top: 10vw; }
+    &.black { top: 24vw; }
+  }
+}

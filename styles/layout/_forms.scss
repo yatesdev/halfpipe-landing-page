@@ -1,0 +1,24 @@
+form {
+  input {
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $grey-base;
+    box-sizing: border-box;
+    padding: 1rem 1rem 0rem 0rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    
+    &::placeholder {
+      font-family:  $font-stack;
+      text-transform: uppercase;
+      color: $content-body-color;
+      font-size: 1.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

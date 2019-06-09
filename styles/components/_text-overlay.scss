@@ -1,0 +1,11 @@
+%text-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+
+  &.red { background-color: $red-base; }
+  &.black { background-color: black; }
+
+  &.four-fifths { width: 80% }
+}

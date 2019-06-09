@@ -1,0 +1,25 @@
+{
+  "name": "halfpipe-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass styles/main.scss style.css",
+    "sass:watch": "sass --watch styles/main.scss style.css",
+    "build": "npm run sass",
+    "start": "npm run sass:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yatesdev/halfpipe-landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yatesdev/halfpipe-landing-page/issues"
+  },
+  "homepage": "https://github.com/yatesdev/halfpipe-landing-page#readme",
+  "devDependencies": {
+    "sass": "^1.21.0"
+  }
+}

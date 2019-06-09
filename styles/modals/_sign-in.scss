@@ -1,0 +1,23 @@
+.sign-in {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .forgot-password {
+    color: $content-body-color;
+    align-self: start;
+    font-size: 1.25rem;
+  }
+
+  .no-account-invite {
+    margin: 1rem;
+    font-size: 1.25rem;
+
+    .red {
+      color: $red-base;
+      cursor: pointer;
+    }
+  }
+}

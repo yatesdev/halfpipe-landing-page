@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'NeuzeitGrotesk-Light';
+  src: url('fonts/DINNeuzeitGrotesk-Light.otf');
+}
+@font-face {
+  font-family: 'NeuzeitGrotesk-BoldCondensed';
+  src: url('fonts/DINNeuzeitGrotesk-BoldCond.otf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+}
+
+.main {
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: $navbar-height;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: $navbar-height;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+%page-section {
+  scroll-snap-align: start;
+  // --background-size: 100vw;
+  background-repeat: no-repeat;
+  height: calc(972/1920 * #{$background-size});
+}
+
+%text-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+}

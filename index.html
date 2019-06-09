@@ -19,26 +19,26 @@
       <a href="#" onclick="toggleSignInModal()">/ Sign In</a>
     </nav>
   </header>
-  <article>
+  <article class="main">
     <section id="home" class="hero">
       <div class="radically-different">
         <div>
-          <div class="overlay red"></div>
+          <div class="text-overlay red"></div>
           <span>Radically</span>
         </div>
         <div>
-          <div class="overlay red"></div>
+          <div class="text-overlay red"></div>
           <span>Different</span>
         </div>
       </div>
       <div class="anti-establishment">
         <div>
           <span>An</span>
-          <div class="overlay black four-fifths"></div>
+          <div class="text-overlay black four-fifths"></div>
           <span>Anti</span>
         </div>
         <div>
-          <div class="overlay black"></div>
+          <div class="text-overlay black"></div>
           <span>Establishment</span>
         </div>
         <div>
@@ -51,7 +51,7 @@
       <div class="left-section">
         <div class="sucks">
           <div>Ad Tech</div>
-          <div class="overlay red"></div>
+          <div class="text-overlay red"></div>
           <span>Sucks</span>
         </div>
       </div>
@@ -99,15 +99,15 @@
           <h1>Want to know more? <br/>
             Request an invite and we'll tell you all about it.
           </h1>
-          <button class="red" onclick="toggleRequestInviteModal()">Request an invitation</button>
-          <button class="gray" onclick="toggleSignInModal()">SIGN IN</button>
+          <button class="button red" onclick="toggleRequestInviteModal()">Request an invitation</button>
+          <button class="button gray" onclick="toggleSignInModal()">SIGN IN</button>
         </div>
       </div>
       <footer class="site-footer">
         <div class="nav-links left">
-          <a href="#about">About Us</a>
+          <!-- <a href="#about">About Us</a>
           <a href="#publishers">Publishers</a>
-          <a href="#demand">Demand</a>
+          <a href="#demand">Demand</a> -->
         </div>
         <div class="copyright">
           <script type="text/javascript">
@@ -145,7 +145,7 @@
         </form>
       </div>
       <footer>
-        <button class="red" type="submit" form="invite-form">SUBMIT</button>
+        <button class="button red" type="submit" form="invite-form">SUBMIT</button>
       </footer>
     </div>
   </aside>
@@ -162,7 +162,7 @@
         </form>
       </div>
       <footer>
-        <button class="gray" type="submit" form="sign-in-form">SUBMIT</button>
+        <button class="button gray" type="submit" form="sign-in-form">SUBMIT</button>
         <div class="no-account-invite">Don't have an account? <span class="red" onclick="toggleSignInModal(); toggleRequestInviteModal();">Request an invite!</span></div>
       </footer>
     </div>
