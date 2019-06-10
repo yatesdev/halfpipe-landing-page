@@ -1,0 +1,152 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  flex-direction: row;
+  min-height: $navbar-height;
+  background-color: $grey-base;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+  &.open {
+    bottom: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    flex-direction: column;
+
+    .logo {
+      flex-basis: 15%;
+    }
+    .nav-links,
+    .social-links,
+    .copyright,
+    .email {
+      display: flex;
+    }
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  .logo {
+    flex: 0 1;
+
+    img {
+      height: calc(#{$navbar-height} - 1.5rem);
+    }
+  }
+
+  .nav-links {
+    display: none;
+    flex: 1 0;
+    flex-direction: column;
+    text-align: center;
+    
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      text-align: left;
+    }
+
+    a {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: black;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-bottom: 2rem;
+
+      @include desktop {
+        font-size: 0.75rem;
+        margin-right: 2rem;
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        color: rgb(165, 13, 13);
+        margin-right: 0;
+      }
+    }
+  }
+
+  .social-links {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0.3;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 5%;
+
+    @include desktop {
+      display: none;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .copyright {
+    display: none;
+    font-size: 0.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .email {
+    display: none;
+    color: $red-base;
+    text-decoration: none;
+    margin-bottom: 10%;
+  }
+
+  .toggle {
+    position: absolute;
+    top: ($navbar-height / 4);
+    right: 0;
+    height: $navbar-height;
+
+    @include desktop {
+      display: none;
+    }
+
+    .bar-1,
+    .bar-2,
+    .bar-3 {
+      width: 4rem;
+      height: 0.2rem;
+      background-color: $red-base;
+      transition: 0.3s;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    &.open {
+      .bar-1 {
+        transform: rotate(-45deg) translate(-1.1rem, 0rem);
+      }
+
+      .bar-2 {
+        opacity: 0;
+      }
+
+      .bar-3 {
+        transform: rotate(45deg) translate(-0.5rem, 0.5rem);
+      }
+    }
+  }
+}

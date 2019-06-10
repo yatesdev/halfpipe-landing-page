@@ -1,3 +1,9 @@
 design-docs
 
+node_modules
+*.map
 .DS_Store
+
+package-lock\.json
+
+style\.css

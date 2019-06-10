@@ -1,0 +1,73 @@
+.hero {
+  @extend %page-section;
+  height: 100%;
+  background-image: url('img/01_head_lg.jpg');
+  background-size: cover;
+  background-position: top;
+  // background-position: right 0 top var(--navbar-height);
+  // `background-attachment: fixed;
+  // height: calc(972/1920 * var(--background-size) - var(--navbar-height));
+  // TODO: If removing background-attachment: fixed, then also remove height line above
+
+  .radically-different {
+    $text-size: 14vw;
+    position: relative;
+    top: 11%;
+    font-family: $font-stack-bold;
+    font-size: $text-size;
+    text-transform: uppercase;
+
+    > div {
+      line-height: $text-size;
+      position: relative;
+      height: $text-size;
+      width: 50vw;
+      margin-left: -1.2vw;
+    }
+
+    .text-overlay {
+      @extend %text-overlay;
+      top: 3vw;
+      left: 0;
+      height: 7vw;
+      opacity: 0.9;
+    }
+  }
+
+  .anti-establishment {
+    $text-size: 4vw;
+    font-family: $font-stack-bold;
+    font-size: $text-size;
+    text-transform: uppercase;
+    position: absolute;
+    top: 11.5%;
+    right: 0%;
+    display: inline-block;
+
+    > div {
+      line-height: $text-size;
+      position: relative;
+      height: $text-size;
+      width: 21vw;
+      text-align: justify;
+      padding-left: .5vw;
+    }
+
+    .text-overlay {
+      @extend %text-overlay;
+      top: 1.5vw;
+      right: 0;
+      height: 0.5vw;
+      opacity: 1;
+    }
+  }
+
+  .red-line {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $red-base;
+    width: calc(190/1920 * 100%);
+    height: calc(41/1920 * 100%);
+  }
+}

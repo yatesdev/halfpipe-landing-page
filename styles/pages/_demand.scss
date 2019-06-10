@@ -1,0 +1,23 @@
+.demand {
+  @extend %page-section;
+  position: relative;
+  background-image: url('img/dem_notext.png');
+  background-size: contain;
+
+  h1 { text-transform: uppercase; }
+
+  .content-area {
+    position: absolute;
+    top: 10vw;
+    left: 6%;
+    height: 8vw;
+    width: 28vw;
+    padding: 1vw;
+    color: black;
+    font-size: 1.25vw;
+    line-height: 150%;
+    color: $content-body-color;
+
+    h1, h2 { color: black; }
+  }
+}

@@ -5,40 +5,65 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <header class="navbar">
+  <header id="navbar" class="navbar">
     <div class="logo">
       <a href="#home">
         <img src="img/hplogo_01.png">
       </a>
     </div>
     <nav class="nav-links">
-      <a href="#about">About Us</a>
-      <a href="#publishers">Publishers</a>
-      <a href="#demand">Demand</a>
-      <a href="#connect">Connect</a>
-      <a href="#" onclick="toggleSignInModal()">/ Sign In</a>
+      <a href="#about" onclick="toggleNavBar(false)">About Us</a>
+      <a href="#publishers" onclick="toggleNavBar(false)">Publishers</a>
+      <a href="#demand" onclick="toggleNavBar(false)">Demand</a>
+      <a href="#connect" onclick="toggleNavBar(false)">Connect</a>
+      <a href="#" onclick="toggleSignInModal(); toggleNavBar(false);">/ Sign In</a>
     </nav>
+    <a class="email" href="mailto:info@halfpipe.com">info@halfpipe.com</a>
+    <div class="social-links">
+      <a href="https://linkedin.com" target="_blank">
+        <img src="img/linkedin_33o.png">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="img/twitter_33o.png">
+      </a>
+      <a href="https://facebook.com" target="_blank">
+        <img src="img/face_33o.png">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="img/insta_33o.png">
+      </a>
+    </div>
+    <div class="copyright">
+      <script type="text/javascript">
+        document.write(`copyright &copy; ${new Date().getFullYear()} halfpipe`);
+      </script>
+    </div>
+    <div id="navbar-toggle" class="toggle" onclick="toggleNavBar()">
+      <div class="bar-1"></div>
+      <div class="bar-2"></div>
+      <div class="bar-3"></div>
+    </div>
   </header>
-  <article>
+  <article class="main">
     <section id="home" class="hero">
       <div class="radically-different">
         <div>
-          <div class="overlay red"></div>
+          <div class="text-overlay red"></div>
           <span>Radically</span>
         </div>
         <div>
-          <div class="overlay red"></div>
+          <div class="text-overlay red"></div>
           <span>Different</span>
         </div>
       </div>
       <div class="anti-establishment">
         <div>
           <span>An</span>
-          <div class="overlay black four-fifths"></div>
+          <div class="text-overlay black four-fifths"></div>
           <span>Anti</span>
         </div>
         <div>
-          <div class="overlay black"></div>
+          <div class="text-overlay black"></div>
           <span>Establishment</span>
         </div>
         <div>
@@ -51,7 +76,7 @@
       <div class="left-section">
         <div class="sucks">
           <div>Ad Tech</div>
-          <div class="overlay red"></div>
+          <div class="text-overlay red"></div>
           <span>Sucks</span>
         </div>
       </div>
@@ -99,15 +124,14 @@
           <h1>Want to know more? <br/>
             Request an invite and we'll tell you all about it.
           </h1>
-          <button class="red" onclick="toggleRequestInviteModal()">Request an invitation</button>
-          <button class="gray" onclick="toggleSignInModal()">SIGN IN</button>
+          <button class="button red" onclick="toggleRequestInviteModal()">Request an invitation</button>
+          <button class="button gray" onclick="toggleSignInModal()">SIGN IN</button>
         </div>
       </div>
       <footer class="site-footer">
         <div class="copyright">
           <script type="text/javascript">
-            const year = new Date().getFullYear();
-            document.write(`copyright &copy; ${year} halfpipe`);
+            document.write(`copyright &copy; ${new Date().getFullYear()} halfpipe`);
           </script>
         </div>
         <div class="social-links">
@@ -140,7 +164,7 @@
         </form>
       </div>
       <footer>
-        <button class="red" type="submit" form="invite-form">SUBMIT</button>
+        <button class="button red" type="submit" form="invite-form">SUBMIT</button>
       </footer>
     </div>
   </aside>
@@ -157,14 +181,21 @@
         </form>
       </div>
       <footer>
-        <button class="gray" type="submit" form="sign-in-form">SUBMIT</button>
+        <button class="button gray" type="submit" form="sign-in-form">SUBMIT</button>
         <div class="no-account-invite">Don't have an account? <span class="red" onclick="toggleSignInModal(); toggleRequestInviteModal();">Request an invite!</span></div>
       </footer>
     </div>
   </aside>
   <script>
+    const navbar = document.getElementById('navbar');
+    const navbarToggle = document.getElementById('navbar-toggle');
     const requestInviteModal = document.getElementById('request-invite-modal');
     const signInModal = document.getElementById('signin');
+
+    function toggleNavBar(forcedValue) {
+      navbar.classList.toggle('open', forcedValue);
+      navbarToggle.classList.toggle('open', forcedValue);
+    }
 
     function toggleRequestInviteModal() {
       requestInviteModal.classList.toggle('open');
