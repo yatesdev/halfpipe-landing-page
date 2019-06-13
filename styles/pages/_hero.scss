@@ -10,55 +10,85 @@
   // TODO: If removing background-attachment: fixed, then also remove height line above
 
   .radically-different {
+    --text-size: 26vw;
     $text-size: 14vw;
     position: relative;
-    top: 11%;
+    top: 54%;
     font-family: $font-stack-bold;
-    font-size: $text-size;
+    font-size: var(--text-size);
     text-transform: uppercase;
 
+    @include desktop {
+      --text-size: 14vw;
+      top: 11%
+    }
+
     > div {
-      line-height: $text-size;
+      line-height: var(--text-size);
       position: relative;
-      height: $text-size;
-      width: 50vw;
+      height: var(--text-size);
+      width: 95vw;
       margin-left: -1.2vw;
+
+      @include desktop {
+        width: 50vw;
+      }
     }
 
     .text-overlay {
       @extend %text-overlay;
-      top: 3vw;
+      top: 6vw;
       left: 0;
-      height: 7vw;
+      height: 12vw;
       opacity: 0.9;
+
+      @include desktop {
+        top: 3vw;
+        height: 7vw;
+      }
     }
   }
 
   .anti-establishment {
+    --text-size: 7vw;
     $text-size: 4vw;
     font-family: $font-stack-bold;
-    font-size: $text-size;
+    font-size: var(--text-size);
     text-transform: uppercase;
     position: absolute;
-    top: 11.5%;
+    top: 21.5%;
     right: 0%;
     display: inline-block;
 
+    @include desktop {
+      --text-size: 4vw;
+      top: 11.5%;
+    }
+
     > div {
-      line-height: $text-size;
+      line-height: var(--text-size);
       position: relative;
-      height: $text-size;
-      width: 21vw;
+      height: calc(var(--text-size) + 1vw);
+      width: 37.5vw;
       text-align: justify;
       padding-left: .5vw;
+
+      @include desktop {
+        width: 21vw;
+        height: var(--text-size);
+      }
     }
 
     .text-overlay {
       @extend %text-overlay;
-      top: 1.5vw;
+      top: 3.25vw;
       right: 0;
       height: 0.5vw;
       opacity: 1;
+
+      @include desktop {
+        top: 1.5vw;
+      }
     }
   }
 
@@ -67,7 +97,12 @@
     right: 0;
     bottom: 0;
     background-color: $red-base;
-    width: calc(190/1920 * 100%);
-    height: calc(41/1920 * 100%);
+    width: calc(600/1920 * 100%);
+    height: calc(50/1920 * 100%);
+
+    @include desktop {
+      width: calc(190/1920 * 100%);
+      height: calc(41/1920 * 100%);
+    }
   }
 }
