@@ -30,9 +30,14 @@ body {
 
 %page-section {
   scroll-snap-align: start;
-  // --background-size: 100vw;
   background-repeat: no-repeat;
-  height: calc(972/1920 * #{$background-size});
+  height: 100vh;
+  max-height: 100vh;
+
+  @include desktop {
+    height: calc(972/1920 * #{$background-size});
+    max-height: unset;
+  }
 }
 
 %text-overlay {

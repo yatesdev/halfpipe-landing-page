@@ -7,39 +7,87 @@
   h1 { text-transform: uppercase; }
 
   .sucks {
-    $text-size: 17vw;
-    font-size: $text-size;
+    --text-size: 30vw;
+    font-size: var(--text-size);
     font-family: $font-stack-bold;
-    line-height: $text-size;
+    line-height: var(--text-size);
     color: white;
     text-transform: uppercase;
     position: absolute;
-    top: 21vw;
+    top: 29vw;
     left:0;
-    margin-left: -1vw;
+    margin-left: -4vw;
+
+    @include desktop {
+      --text-size: 17vw;
+      top: 21vw;
+      margin-left: -1vw;
+      
+    }
 
     .text-overlay {
       @extend %text-overlay;
-      top: 11vw;
+      top: 20vw;
       left: 0;
-      height: 16vw;
-      width: 47vw;
+      height: 26vw;
+      width: 82vw;
       opacity: 0.9;
+
+      @include desktop {
+        top: 11vw;
+        left: 0;
+        height: 16vw;
+        width: 47vw;
+      }
+    }
+  }
+
+  .left-section {
+    height: 80vw;
+    background-color: black; //DEBUG
+
+    @include desktop {
+      height: unset;
     }
   }
 
   .content-area {
-    position: absolute;
-    top: 5vw;
-    right: 2%;
-    height: 8vw;
-    width: 26.4vw;
-    padding: 1vw;
-    padding-right: 3vw;
-    font-size: 1.25vw;
+    padding: 5vw;
+    font-size: 3.35vw;
     line-height: 150%;
     color: $content-body-color;
 
-    h1, h2 { color: black; }
+    @include desktop {
+      position: absolute;
+      top: 5vw;
+      right: 2%;
+      height: 8vw;
+      width: 26.4vw;
+      padding: 1vw;
+      padding-right: 3vw;
+      font-size: 1.25vw;
+      line-height: 150%;
+    }
+
+    h1, h2 { 
+      margin-top: 0;
+      color: black;
+
+      @include desktop {
+        margin-top: unset;
+      }
+    }
+  }
+
+  .red-rectangle {
+    position: absolute;
+    width: 85vw;
+    height: 26vw;
+    right: 0;
+    background-color: $red-base;
+
+    @include desktop {
+      display: none;
+    }
   }
 }
