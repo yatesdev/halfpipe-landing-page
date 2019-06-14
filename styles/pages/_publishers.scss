@@ -35,8 +35,8 @@
       margin-top: 0;
 
       @include desktop {
-        margin-top: unset;
-        margin-bottom: unset;
+        margin-top: 1em; // reset to default - unset doesn't work
+        margin-bottom: 1em; // reset to default - unset doesn't work
       }
     }
   }

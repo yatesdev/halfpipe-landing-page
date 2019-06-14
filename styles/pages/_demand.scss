@@ -4,20 +4,96 @@
   background-image: url('img/dem_notext.png');
   background-size: contain;
 
-  h1 { text-transform: uppercase; }
+  .left-section {
+    margin-bottom: 9vw;
 
+    @include desktop {
+      margin-bottom: unset;
+    }
+  }
   .content-area {
-    position: absolute;
-    top: 10vw;
-    left: 6%;
-    height: 8vw;
-    width: 28vw;
-    padding: 1vw;
+    padding: 6vw;
+    padding-right: 12vw;
     color: black;
-    font-size: 1.25vw;
+    font-size: 3.35vw;
     line-height: 150%;
     color: $content-body-color;
 
-    h1, h2 { color: black; }
+    @include desktop {
+      position: absolute;
+      top: 10vw;
+      left: 6%;
+      height: 8vw;
+      width: 28vw;
+      padding: 1vw;
+      color: black;
+      font-size: 1.25vw;
+      line-height: 150%;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      margin-bottom: 10vw;
+      font-weight: 100;
+    }
+    h1, h2 {
+      color: black;
+
+      @include desktop {
+        margin-top: 1em; // reset to default - unset doesn't work
+        margin-bottom: 1em; // reset to default - unset doesn't work
+        font-weight: unset;
+      }
+    }
+  }
+
+  .demand-better {
+    --text-size: 26vw;
+    font-family:  $font-stack-bold;
+    font-size: var(--text-size);
+    text-transform: uppercase;
+    // color: white;
+    margin-left: 20vw;
+
+    @include desktop {
+      display: none;
+    }
+
+    > div {
+      position: relative;
+      line-height: var(--text-size);
+      height: calc(var(--text-size) + 5vw);
+    }
+
+    .text-overlay {
+      @extend %text-overlay;
+      top: 7vw;
+      height: 11vw;
+      opacity: 0.9;
+    }
+  }
+
+  .red-rectangle {
+    position: absolute;
+    background-color: $red-base;
+    opacity: 0.9;
+
+    @include desktop {
+      display: none;
+    }
+
+    &.top-right {
+      top: 0;
+      right:0;
+      width: 36vw;
+      height: 4vw;
+    }
+
+    &.bottom-left {
+      bottom: 0;
+      left: 0;
+      width: 4vw;
+      height: 57vw;
+    }
   }
 }
