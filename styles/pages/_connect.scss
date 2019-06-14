@@ -2,29 +2,61 @@
   @extend %page-section;
   position: relative;
   background-image: url('img/signin.png');
-  background-size: contain;
-  height: calc(1138/1919 * #{$background-size});
+  background-size: cover;
+  background-position-x: 20%;
+  height: 100%;
+
+  @include desktop {
+    background-size: contain;
+    background-position-x: unset;
+    height: calc(1138/1919 * #{$background-size});
+  }
 
   h1 {
-    font-size: 2vw;
+    font-size: 4vw;
+    line-height: 1.2;
     color: gray;
+    margin-bottom: 8vw;
+
+    @include desktop {
+      font-size: 2vw;
+      margin-bottom: 1em; // reset
+    }
   }
 
   .centered {
-    position: absolute;
-    top: 5vh;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 75vh;
     text-align: center;
     line-height: 200%;
+    padding: 5vw;
+    padding-top: 6vw;
+
+    @include desktop {
+      position: absolute;
+      top: 5vh;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 75vh;
+      text-align: center;
+      line-height: 200%;
+      padding: 0;
+    }
   }
 
   button {
     margin: auto;
-    margin-bottom: 2.5vw;
+    margin-bottom: 4.5vw;
+    width: 57%;
+    height: 15vw;
+    font-size: 3.5vw;
 
-    &.red { top: 10vw; }
-    &.black { top: 24vw; }
+    @include desktop {
+      margin-bottom: 2.5vw;
+      font-size: 2vw;
+      width: 26vw;
+      height: 8vw;
+      
+      &.red { top: 10vw; }
+      &.black { top: 24vw; }
+    }
   }
 }
