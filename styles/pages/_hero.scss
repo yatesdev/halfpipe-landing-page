@@ -2,12 +2,18 @@
   @extend %page-section;
   height: 100%;
   background-image: url('img/01_head_lg.jpg');
-  background-size: cover;
-  background-position: top;
+  background-size: auto 150%;
+  background-position-x: background-focus(100, 79, 50);
+  
   // background-position: right 0 top var(--navbar-height);
   // `background-attachment: fixed;
   // height: calc(972/1920 * var(--background-size) - var(--navbar-height));
   // TODO: If removing background-attachment: fixed, then also remove height line above
+
+  @include desktop {
+    background-size: cover;
+    background-position: top;
+  }
 
   .radically-different {
     --text-size: 26vw;
@@ -59,6 +65,7 @@
     top: 21.5%;
     right: 0%;
     display: inline-block;
+    overflow: hidden;
 
     @include desktop {
       --text-size: 4vw;

@@ -28,3 +28,8 @@
 @mixin phone {
   @include breakpoint(phone) { @content };
 }
+
+// Based off of https://css-tricks.com/focusing-background-image-precise-location-percentages/
+@function background-focus($ratio, $bg, $box: 50) {
+  @return calc(((#{$bg} + (50 - #{$box})/#{$ratio} - 50) * (#{$ratio} / (#{$ratio} - 1)) + 50) * 1%);
+}
