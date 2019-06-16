@@ -1,9 +1,12 @@
 .publishers {
   @extend %page-section;
   position: relative;
-  background-image: url('img/pub_notext.png');
-  background-size: contain;
   background-color: black;
+
+  @include desktop {
+    background-image: url('img/pub_notext.png');
+    background-size: contain;
+  }
 
   h1 {
     text-transform: uppercase;
@@ -11,6 +14,7 @@
 
   .content-area {
     padding: 10vw;
+    padding-bottom: 15vw;
     padding-left: 15vw;
     color: white;
     font-size: 3.35vw;
@@ -38,6 +42,22 @@
         margin-top: 1em; // reset to default - unset doesn't work
         margin-bottom: 1em; // reset to default - unset doesn't work
       }
+    }
+  }
+
+  .left-section {
+    background-color: rgba(0, 0, 0, 0.075);
+    background-image: url(img/03_pub_lg.jpg);
+    background-blend-mode: darken;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    padding-bottom: 30vh;
+    background-position: top -6% right 14%;
+    background-origin: padding-box;
+    margin-right: 5vw;
+
+    @include desktop {
+      display: none;
     }
   }
 
