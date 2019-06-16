@@ -1,8 +1,11 @@
 .demand {
   @extend %page-section;
   position: relative;
-  background-image: url('img/dem_notext.png');
-  background-size: contain;
+  
+  @include desktop {
+    background-image: url('img/dem_notext.png');
+    background-size: contain;
+  }
 
   .left-section {
     margin-bottom: 9vw;
@@ -11,6 +14,7 @@
       margin-bottom: unset;
     }
   }
+
   .content-area {
     padding: 6vw;
     padding-right: 12vw;
@@ -47,13 +51,26 @@
     }
   }
 
+  .right-section {
+    background-image: url('img/04_dem_lg.jpg');
+    background-repeat: no-repeat;
+    background-size: 93%;
+    margin-left: 7vw;
+    padding-top: 12vw;
+    padding-bottom: 40vw;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
   .demand-better {
-    --text-size: 26vw;
+    --text-size: 28vw;
     font-family:  $font-stack-bold;
     font-size: var(--text-size);
     text-transform: uppercase;
-    // color: white;
-    margin-left: 20vw;
+    color: white;
+    margin-left: 11vw;
 
     @include desktop {
       display: none;
