@@ -22,10 +22,17 @@
     left:0;
     margin-left: -4vw;
 
+    @include tablet {
+      --text-size: 23vw;
+      top: 18vw;
+      margin-left: -1.5vw;
+      line-height: calc(var(--text-size) + 4vw);
+    }
     @include desktop {
       --text-size: 17vw;
       top: 21vw;
       margin-left: -1vw;
+      line-height: var(--text-size);
       
     }
 
@@ -37,9 +44,14 @@
       width: 82vw;
       opacity: 0.9;
 
+      @include tablet {
+        top: 15.5vw;
+        height: 26vw;
+        width: 63vw;
+      }
       @include desktop {
         top: 11vw;
-        left: 0;
+        // left: 0;
         height: 16vw;
         width: 47vw;
       }
@@ -48,13 +60,17 @@
 
   .left-section {
     height: 75vw;
-    // background-color: black; //DEBUG
     background-image: url('img/02_about_lg.jpg');
-    // background-size: cover;
     background-size: 150%;
     background-position-x: background-focus(4, 34, 90);
     background-position-y: background-focus(4, 53, 90);
 
+    @include tablet {
+      background-size: 110%;
+      background-position-x: background-focus(4, 22, 90);
+      background-position-y: background-focus(4, 60, 90);
+      height: 64vw;
+    }
     @include desktop {
       height: unset;
     }
@@ -67,6 +83,11 @@
     line-height: 150%;
     color: $content-body-color;
 
+    @include tablet {
+      padding-left: 10vw;
+      padding-right: 35vw;
+      font-size: 2.5vw;
+    }
     @include desktop {
       position: absolute;
       top: 5vw;
@@ -74,6 +95,7 @@
       height: 8vw;
       width: 26.4vw;
       padding: 1vw;
+      padding-left: 1vw;
       padding-right: 3vw;
       font-size: 1.25vw;
       line-height: 150%;
@@ -96,6 +118,11 @@
     right: 0;
     background-color: $red-base;
 
+    @include tablet {
+      width: 30vw;
+      height: 22vw;
+      bottom: 11vw;
+    }
     @include desktop {
       display: none;
     }
