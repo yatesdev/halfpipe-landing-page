@@ -8,5 +8,6 @@ $font-stack-bold: 'NeuzeitGrotesk-BoldCondensed', sans-serif;
 $background-size: 100vw;
 
 $breakpoints: (
-  'desktop': 1024px
+  'desktop': 1024px,
+  'tablet': 480px // maybe 600px
 );
