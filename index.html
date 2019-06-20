@@ -185,13 +185,17 @@
         <h1>Request an invite</h1>
       </header>
       <div class="modal-content">
-        <form id="invite-form">
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="Email">
+        <form id="invite-form" action="https://halfpipe.us3.list-manage.com/subscribe/post" method="POST">
+          <input type="hidden" name="u" value="031d9f7656b430876ee713337">
+          <input type="hidden" name="id" value="aa26739f6f">
+          <input type="email" placeholder="Email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+          <input type="text" placeholder="First Name" name="MERGE1" id="MERGE1" size="25" value="">
+          <input type="text" placeholder="Last Name" name="MERGE2" id="MERGE2" size="25" value="">
         </form>
       </div>
       <footer>
-        <button class="button red" type="submit" form="invite-form">SUBMIT</button>
+        <button class="button red" type="submit" form="invite-form" id="mc-embedded-subscribe">SUBMIT</button>
+        <!--TODO: add validation to disable button until at least email is filled out and clear form when it looses focus  -->
       </footer>
     </div>
   </aside>
