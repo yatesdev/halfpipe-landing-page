@@ -11,7 +11,7 @@
   letter-spacing: 2px;
 
   @include desktop {
-    align-items: flex-end;
+    align-items: center;
     flex-direction: row;
   }
 
@@ -34,12 +34,15 @@
     justify-content: space-between;
     align-items: center;
 
+    @include tablet {
+      width: 55%;
+    }
     @include desktop {
       flex: 0 0 25vw;
     }
     a {
       text-decoration: none;
-      opacity: 0.5;
+      opacity: 0.4;
 
       &:first-child {
         display: none;
@@ -57,10 +60,23 @@
       height: 42px;
       width: 42px;
 
+      @include tablet {
+        height: 8vw;
+        width: 8vw;
+      }
       @include desktop {
         height: 2.5vw;
         width: 2.5vw;
       }
+    }
+  }
+
+  .dummy-spacer {
+    display: none;
+    
+    @include desktop {
+      display: unset;
+      flex: 0 0 25vw;
     }
   }
 }

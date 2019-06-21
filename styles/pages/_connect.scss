@@ -3,7 +3,7 @@
   position: relative;
   background-image: url('img/signin.png');
   background-size: cover;
-  background-position-x: 20%;
+  background-position-x: background-focus(100, 20, 50);
   height: 100%;
 
   @include desktop {
@@ -18,6 +18,9 @@
     color: gray;
     margin-bottom: 8vw;
 
+    @include tablet {
+      font-size: 3vw;
+    }
     @include desktop {
       font-size: 2vw;
       margin-bottom: 1em; // reset
