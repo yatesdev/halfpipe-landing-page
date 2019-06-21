@@ -5,6 +5,17 @@
     align-items: center;
   }
 
+  .flex-row {
+    display: flex;
+    align-items: center;
+    input {
+      margin: 1rem 0rem 1rem 0rem;
+    }
+    input:last-child{
+      margin-left: 20px
+    }
+  }
+
   footer {
     margin-bottom: 3.5rem;
   }
