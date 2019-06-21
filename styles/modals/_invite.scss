@@ -8,9 +8,8 @@
   .flex-row {
     display: flex;
     align-items: center;
-    input {
-      margin: 1rem 0rem 1rem 0rem;
-    }
+    width: 100%;
+
     input:last-child{
       margin-left: 20px
     }
