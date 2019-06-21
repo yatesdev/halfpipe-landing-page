@@ -180,24 +180,24 @@
     </section>
   </article>
   <aside id="request-invite-modal" class="request-invite modal-overlay">
-    <div class="modal">
-      <header>
-        <h1>Request an invite</h1>
-      </header>
-      <div class="modal-content">
-        <form id="invite-form" action="https://halfpipe.us3.list-manage.com/subscribe/post" method="POST">
+    <form id="invite-form" action="https://halfpipe.us3.list-manage.com/subscribe/post" method="POST">
+      <div class="modal">
+        <header>
+          <h1>Request an invite</h1>
+        </header>
+        <div class="modal-content">
           <input type="hidden" name="u" value="031d9f7656b430876ee713337">
           <input type="hidden" name="id" value="aa26739f6f">
           <input type="email" placeholder="Email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" required>
           <input type="text" placeholder="First Name" name="MERGE1" id="MERGE1" size="25" value="">
           <input type="text" placeholder="Last Name" name="MERGE2" id="MERGE2" size="25" value="">
-        </form>
+        </div>
+        <footer>
+          <button class="button red" type="submit" form="invite-form" id="mc-embedded-subscribe">SUBMIT</button>
+          <!--TODO: add validation to disable button until at least email is filled out and clear form when it looses focus  -->
+        </footer>
       </div>
-      <footer>
-        <button class="button red" type="submit" form="invite-form" id="mc-embedded-subscribe">SUBMIT</button>
-        <!--TODO: add validation to disable button until at least email is filled out and clear form when it looses focus  -->
-      </footer>
-    </div>
+    </form>
   </aside>
   <aside id="signin" class="sign-in modal-overlay">
     <div class="modal">

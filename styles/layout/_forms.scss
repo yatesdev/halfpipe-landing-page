@@ -21,4 +21,12 @@ form {
       outline: none;
     }
   }
+
+  [type="submit"] {
+    transition: opacity 0.3s;
+  }
+  
+  &:invalid [type="submit"] {
+    opacity: 0.4;
+  }
 }
