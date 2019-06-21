@@ -10,7 +10,7 @@
   .left-section {
     margin-bottom: 9vw;
 
-    @include desktop {
+    @include tablet {
       margin-bottom: unset;
     }
   }
@@ -23,6 +23,10 @@
     line-height: 150%;
     color: $content-body-color;
 
+    @include tablet {
+      font-size: 2.5vw;
+      padding-right: 36vw;
+    }
     @include desktop {
       position: absolute;
       top: 10vw;
@@ -39,8 +43,13 @@
       text-transform: uppercase;
       margin-bottom: 10vw;
       font-weight: 100;
+
+      @include tablet {
+        margin-bottom: 7vw;
+      }
     }
     h1, h2 {
+      margin-top: 0;
       color: black;
 
       @include desktop {
@@ -59,6 +68,11 @@
     padding-top: 12vw;
     padding-bottom: 40vw;
 
+    @include tablet {
+      background-size: 70%;
+      background-position: top center;
+      margin-left: unset;
+    }
     @include desktop {
       display: none;
     }
@@ -72,6 +86,10 @@
     color: white;
     margin-left: 11vw;
 
+    @include tablet {
+      --text-size: 20vw;
+      margin-left: 30vw;
+    }
     @include desktop {
       display: none;
     }
@@ -87,6 +105,11 @@
       top: 7vw;
       height: 11vw;
       opacity: 0.9;
+
+      @include tablet {
+        top: 5vw;
+        height: 8.5vw;
+      }
     }
   }
 
@@ -111,6 +134,10 @@
       left: 0;
       width: 4vw;
       height: 57vw;
+
+      @include tablet {
+        height: 27vw;
+      }
     }
   }
 }
