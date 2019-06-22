@@ -41,3 +41,16 @@ body {
   }
 }
 
+@media only screen and (orientation:landscape) and (max-height: 480px) {
+  .rotation-lock{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .main, .navbar {
+    display: none !important;
+  }
+}
+
