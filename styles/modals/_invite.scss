@@ -6,12 +6,16 @@
   }
 
   .flex-row {
-    display: flex;
+    display: block;
     align-items: center;
     width: 100%;
 
-    input:last-child{
-      margin-left: 20px
+    @include tablet {
+      display: flex;
+
+      input:last-child{
+        margin-left: 20px;
+      }
     }
   }
 
