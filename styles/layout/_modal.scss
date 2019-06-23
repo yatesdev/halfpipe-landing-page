@@ -47,6 +47,20 @@
     min-height: 3.5rem;
     max-height: 9vh;
   }
+
+  .modal-close {
+    position: absolute;
+    top: -2.5vh;
+    right: 0;
+    height: 2.5vh;
+    font-size: 1.5vh;
+    font-family: $font-stack;
+    vertical-align: middle;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
 }
 
 .modal-overlay {
