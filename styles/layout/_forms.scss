@@ -8,14 +8,14 @@ form {
     padding: 1rem 1rem 0rem 0rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 100%;
     
     &::placeholder {
       font-family:  $font-stack;
       text-transform: uppercase;
       color: $content-body-color;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
 
     &:focus {

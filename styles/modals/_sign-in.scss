@@ -8,16 +8,21 @@
   .forgot-password {
     color: $content-body-color;
     align-self: start;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .no-account-invite {
     margin: 1rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
 
     .red {
       color: $red-base;
       cursor: pointer;
+      display: block;
+
+      @include tablet {
+        display: inline;
+      }
     }
   }
 }
