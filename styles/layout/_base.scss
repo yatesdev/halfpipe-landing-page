@@ -48,7 +48,21 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    font-size: 1.5rem;
+    line-height: 100vh;
+    vertical-align: middle;
+
+    &.modal-overlay::before {
+      content: '';
+      background-image: url('img/hplogo_notext.png');
+      background-size: 75vh;
+      background-repeat: no-repeat;
+      background-position: center center;
+      opacity: 0.05;
+    }
   }
+
   .main,
   .navbar,
   .sign-in,
