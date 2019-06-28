@@ -230,23 +230,23 @@
     </form>
   </aside>
   <aside id="signin" class="sign-in modal-overlay">
-    <div class="modal">
-      <header>
-        <h1>Sign In</h1>
-        <button type="button" class="modal-close" onclick="toggleSignInModal()">X</button>
-      </header>
-      <div class="modal-content">
-        <form id="sign-in-form">
-          <input type="text" placeholder="Username">
-          <input type="password" placeholder="Password">
+    <form id="sign-in-form" action="" onsubmit="toggleSignInModal()">
+      <div class="modal">
+        <header>
+          <h1>Sign In</h1>
+          <button type="button" class="modal-close" onclick="toggleSignInModal()">X</button>
+        </header>
+        <div class="modal-content">
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
           <div class="forgot-password">Forgot password?</div>
-        </form>
+        </div>
+        <footer>
+          <button class="button gray" type="submit" form="sign-in-form">SUBMIT</button>
+          <div class="no-account-invite">Don't have an account? <span class="red" onclick="toggleSignInModal(); toggleRequestInviteModal();">Request an invite!</span></div>
+        </footer>
       </div>
-      <footer>
-        <button class="button gray" type="submit" form="sign-in-form">SUBMIT</button>
-        <div class="no-account-invite">Don't have an account? <span class="red" onclick="toggleSignInModal(); toggleRequestInviteModal();">Request an invite!</span></div>
-      </footer>
-    </div>
+    </form>
   </aside>
   <aside class="rotation-lock modal-overlay">
     <div>Please rotate your device</div>
