@@ -211,7 +211,7 @@
       <div class="modal">
         <header>
           <h1>Request an invite</h1>
-          <button type="button" class="modal-close" onclick="toggleRequestInviteModal()">X</button>
+          <button type="button" class="modal-close" onclick="toggleRequestInviteModal(); requestInviteForm.reset();">X</button>
         </header>
         <div class="modal-content">
           <input type="hidden" name="u" value="031d9f7656b430876ee713337">
@@ -224,7 +224,6 @@
         </div>
         <footer>
           <button class="button red" type="submit" form="invite-form" id="mc-embedded-subscribe">SUBMIT</button>
-          <!--TODO: clear form when it looses focus  -->
         </footer>
       </div>
     </form>
@@ -234,7 +233,7 @@
       <div class="modal">
         <header>
           <h1>Sign In</h1>
-          <button type="button" class="modal-close" onclick="toggleSignInModal()">X</button>
+          <button type="button" class="modal-close" onclick="toggleSignInModal(); signInForm.reset();">X</button>
         </header>
         <div class="modal-content">
           <input type="text" placeholder="Username" required>
@@ -256,6 +255,8 @@
     const navbarToggle = document.getElementById('navbar-toggle');
     const requestInviteModal = document.getElementById('request-invite-modal');
     const signInModal = document.getElementById('signin');
+    const signInForm = document.getElementById('sign-in-form');
+    const requestInviteForm = document.getElementById('invite-form');
 
     function toggleNavBar(forcedValue) {
       navbar.classList.toggle('open', forcedValue);
@@ -273,9 +274,11 @@
     window.onclick = function(event) {
       if (event.target == requestInviteModal) {
         toggleRequestInviteModal();
+        requestInviteForm.reset();
       }
       if (event.target == signInModal) {
         toggleSignInModal();
+        signInForm.reset();
       }
     }
   </script>
