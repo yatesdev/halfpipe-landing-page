@@ -4,6 +4,17 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .invalid {
+    text-align: center;
+    color: $red-base;
+
+    &.none {
+      // If the jumping of content downards is okay, replace with
+      // display: none;
+      opacity: 0;
+    }
+  }
   
   .forgot-password {
     color: $content-body-color;
