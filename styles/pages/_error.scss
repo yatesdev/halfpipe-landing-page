@@ -1,0 +1,59 @@
+.error-page {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 1.5rem;
+  vertical-align: middle;
+
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: '';
+    z-index: 10;
+    opacity: 0.5;
+    background-color: $grey-base;
+    background-image: url('img/hplogo_notext.png');
+    background-size: 75vmin;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.05;
+  }
+
+  .error-message {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3.35vw;
+
+    @include tablet {
+      font-size: 2.5vw;
+    }
+
+    @include desktop {
+      font-size: 1.25vw;
+    }
+  }
+
+  .back-to-safe {
+    a {
+      text-decoration: none;
+      color: $red-base;
+    }
+
+    font-size: 3.35vw;
+    @include tablet {
+      font-size: 2.5vw;
+    }
+
+    @include desktop {
+      font-size: 1.25vw;
+    }
+  }
+}
