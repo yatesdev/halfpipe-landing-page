@@ -1,7 +1,8 @@
 .button {
+  --button-height: 8vw;
   display: block;
   width: 26vw;
-  height: 8vw;
+  height: var(--button-height);
   font-size: 2vmax;
   font-family: inherit;
   color: white;
@@ -11,4 +12,9 @@
 
   &.red { background-color: $red-base; }
   &.gray { background-color: $content-body-color; }
+  &.rounded {
+    border-radius: calc(var(--button-height) / 2);
+    padding-left: calc(var(--button-height) / 2);
+    padding-right: calc(var(--button-height) / 2);
+  }
 }

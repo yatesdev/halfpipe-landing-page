@@ -116,6 +116,32 @@
     }
   }
 
+  .call-to-action-bar {
+    --cta-height: 15vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--cta-height);
+    background-color: rgba(240, 20, 20, 0.9);
+    z-index: 5;
+
+    @include desktop {
+      --cta-height: 8vmin;
+    }
+
+    .button {
+      --button-height: calc(var(--cta-height) / 2);
+      width: max-content;
+      color: $red-base;
+      font-weight: bold;
+      font-size: calc(var(--cta-height) / 4);;
+    }
+  }
+
   .red-line {
     position: absolute;
     right: 0;
