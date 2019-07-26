@@ -14,11 +14,19 @@
   z-index: 10;
   border-bottom: 1px solid grey;
 
+  &.red-border {
+    border-bottom: 30px solid $red-base;
+  }
+
   &.open {
     bottom: 0;
     padding-top: 2vh;
     padding-bottom: 2vh;
     flex-direction: column;
+
+    &.red-border {
+      border-bottom: 1px solid grey;
+    }
 
     .logo {
       flex-basis: 15%;
@@ -30,6 +38,7 @@
       display: flex;
     }
   }
+
 
   @include desktop {
     flex-direction: row;

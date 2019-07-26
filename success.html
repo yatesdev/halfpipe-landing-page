@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Halfpipe - Registration Successful</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Favicon Support -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#777777">
+  <meta name="apple-mobile-web-app-title" content="Halfpipe">
+  <meta name="application-name" content="Halfpipe">
+  <meta name="msapplication-TileColor" content="#f01414">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142645614-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142645614-1');
+  </script>
+</head>
+<body class="success-page">
+  <header id="navbar" class="navbar red-border">
+    <div class="logo">
+      <a href="#home">
+        <img src="img/hplogo_01.png">
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="#about" onclick="toggleNavBar(false)">About Us</a>
+      <a href="#publishers" onclick="toggleNavBar(false)">Publishers</a>
+      <a href="#demand" onclick="toggleNavBar(false)">Demand</a>
+      <a href="#connect" onclick="toggleNavBar(false)">Connect</a>
+      <a href="#" onclick="toggleSignInModal(); toggleNavBar(false);">/ Sign In</a>
+    </nav>
+    <a class="email" href="mailto:info@halfpipe.com">info@halfpipe.com</a>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/company/halfpipeco" target="_blank">
+        <img src="img/linkedin_33o.png">
+      </a>
+      <a href="https://twitter.com/halfpipeco" target="_blank">
+        <img src="img/twitter_33o.png">
+      </a>
+      <a href="https://www.facebook.com/halfpipeco" target="_blank">
+        <img src="img/face_33o.png">
+      </a>
+      <a href="https://www.instagram.com/halfpipeco/" target="_blank">
+        <img src="img/insta_33o.png">
+      </a>
+    </div>
+    <div class="copyright">
+      <script type="text/javascript">
+        document.write(`copyright &copy; ${new Date().getFullYear()} halfpipe`);
+      </script>
+    </div>
+    <div id="navbar-toggle" class="toggle" onclick="toggleNavBar()">
+      <div class="bar-1"></div>
+      <div class="bar-2"></div>
+      <div class="bar-3"></div>
+    </div>
+  </header>
+  <article class="main">
+    <section class="success-section">
+      <div class="content-area-wrapper">
+        <div class="content-area">
+          <h1 class="title">Success!</h1>
+          <div class="content">Message received, and we are stoked to work with you. We'll keep you posted as we progress with halfpipe
+            development so keep checking your email. In the meantime, get out there and skate!
+          </div>
+          <div class="links">
+            <button class="button red" onclick="window.location.href = './index.html';">HOME</button>
+            <div class="social-links red">
+              <a href="https://www.linkedin.com/company/halfpipeco" target="_blank">
+                <img src="img/linkedin_33o.png">
+              </a>
+              <a href="https://twitter.com/halfpipeco" target="_blank">
+                <img src="img/twitter_33o.png">
+              </a>
+              <a href="https://facebook.com/halfpipeco" target="_blank">
+                <img src="img/face_33o.png">
+              </a>
+              <a href="https://instagram.com/halfpipeco" target="_blank">
+                <img src="img/insta_33o.png">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <div class="dummy-spacer"></div>
+        <div class="copyright">
+          <script type="text/javascript">
+            document.write(`copyright &copy; ${new Date().getFullYear()} halfpipe`);
+          </script>
+        </div>
+        <div class="social-links">
+          <a href="mailto:info@halfpipe.co">info@halfpipe.com</a>
+          <a href="https://www.linkedin.com/company/halfpipeco" target="_blank">
+            <img src="img/linkedin_33o.png">
+          </a>
+          <a href="https://twitter.com/halfpipeco" target="_blank">
+            <img src="img/twitter_33o.png">
+          </a>
+          <a href="https://facebook.com/halfpipeco" target="_blank">
+            <img src="img/face_33o.png">
+          </a>
+          <a href="https://instagram.com/halfpipeco" target="_blank">
+            <img src="img/insta_33o.png">
+          </a>
+        </div>
+      </footer>
+    </section>
+  </article>
+  <aside class="rotation-lock modal-overlay">
+    <div>Please rotate your device</div>
+  </aside>
+  <script>
+    const navbar = document.getElementById('navbar');
+    const navbarToggle = document.getElementById('navbar-toggle');
+
+    function toggleNavBar(forcedValue) {
+      navbar.classList.toggle('open', forcedValue);
+      navbarToggle.classList.toggle('open', forcedValue);
+    }
+  </script>
+</body>
+</html>
