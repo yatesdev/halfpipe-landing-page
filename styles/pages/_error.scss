@@ -42,6 +42,7 @@
   }
 
   .back-to-safe {
+    z-index: 10;
     a {
       text-decoration: none;
       color: $red-base;
