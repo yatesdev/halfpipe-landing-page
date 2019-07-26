@@ -69,9 +69,8 @@
       .button {
         flex: 0 1 50%;
         height: 7vmax;
-        opacity: 1;
         min-width: 150px;
-        background-color: $red-base;
+        background-color: rgba(203, 7, 7, 0.8);
         margin-bottom: 2vmax;
 
         @include tablet {
