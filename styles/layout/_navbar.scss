@@ -81,9 +81,19 @@
         margin-bottom: 0;
       }
 
+      &:nth-last-child(2),
       &:last-child {
         color: rgb(165, 13, 13);
         margin-right: 0;
+      }
+
+      &.alignment {
+        &:after {
+          @include desktop {
+            content: ' ';
+            white-space: pre;
+          }
+        }
       }
     }
   }
