@@ -137,8 +137,9 @@
       --button-height: calc(var(--cta-height) / 2);
       width: max-content;
       color: $red-base;
+      background-color: white;
       font-weight: bold;
-      font-size: calc(var(--cta-height) / 4);;
+      font-size: calc(var(--cta-height) / 4);
     }
   }
 
