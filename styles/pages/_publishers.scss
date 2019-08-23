@@ -68,6 +68,7 @@
     background-position: top -6% right 14%;
     background-origin: padding-box;
     margin-right: 5vw;
+    background-clip: content-box;
 
     @include tablet {
       background-size: 50%;

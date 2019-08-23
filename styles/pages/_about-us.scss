@@ -22,6 +22,9 @@
     top: 25vw;
     left:0;
     margin-left: -4vw;
+    max-width: 104vw;
+    overflow: hidden;
+    text-overflow: clip;
 
     @include tablet {
       --text-size: 23vw;
