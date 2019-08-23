@@ -1,10 +1,11 @@
 .modal {
+  --red-header-height: 2.8vh;
   position: relative;
   top: 10vh;
   margin: auto;
   width: 80vw;
   max-width: 800px;
-  border-top: 2.5vh solid $modal-top-red;
+  border-top: var(--red-header-height) solid $modal-top-red;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -45,15 +46,15 @@
     width: 50%;
     font-size: 1.25rem;
     min-height: 3.5rem;
-    max-height: 9vh;
+    max-height: 6vh;
   }
 
   .modal-close {
     position: absolute;
-    top: -2.5vh;
+    top: calc(var(--red-header-height) * -1);
     right: 0;
-    height: 2.5vh;
-    font-size: 1.5vh;
+    height: var(--red-header-height);
+    font-size: calc(var(--red-header-height) * 0.9);
     font-family: $font-stack;
     vertical-align: middle;
     color: white;
