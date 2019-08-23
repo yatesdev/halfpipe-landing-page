@@ -30,7 +30,6 @@ body {
 }
 
 %page-section {
-  scroll-snap-align: start;
   background-repeat: no-repeat;
   height: 100vh;
   max-height: 100vh;
@@ -38,6 +37,7 @@ body {
   @include desktop {
     height: calc(972/1920 * #{$background-size});
     max-height: unset;
+    scroll-snap-align: start;
   }
 }
 
