@@ -1,6 +1,7 @@
 .about-us {
   @extend %page-section;
   position: relative;
+  z-index: map-get($z-indexes, 'page1' );
 
   @include desktop {
     background-image: url('img/aboutus.png');

@@ -1,6 +1,7 @@
 .demand {
   @extend %page-section;
   position: relative;
+  z-index: map-get($z-indexes, 'page3' );
   
   @include desktop {
     background-image: url('img/dem_notext.png');

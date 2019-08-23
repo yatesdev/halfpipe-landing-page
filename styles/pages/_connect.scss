@@ -5,6 +5,7 @@
   background-size: cover;
   background-position-x: background-focus(100, 20, 50);
   height: 100%;
+  z-index: map-get($z-indexes, 'page4' );
 
   @include desktop {
     background-size: contain;

@@ -127,7 +127,7 @@
     right: 0;
     height: var(--cta-height);
     background-color: rgba(240, 20, 20, 0.9);
-    z-index: 5;
+    z-index: map-get($z-indexes, 'page1' );
 
     @include tablet {
       --cta-height: 8vmin;

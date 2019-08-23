@@ -11,3 +11,12 @@ $breakpoints: (
   'desktop': 1024px,
   'tablet': 480px // maybe 600px
 );
+
+$z-indexes: (
+  'navbar': 1000,
+  'page1': 100,
+  'page2': 200,
+  'page3': 300,
+  'page4': 400,
+  'modal': 2000
+)
