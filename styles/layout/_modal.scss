@@ -13,6 +13,7 @@
   z-index: map-get($z-indexes, 'modal' );
 
   @include desktop {
+    --red-header-height: 2.5vh;
     width: 65vw;
   }
 
